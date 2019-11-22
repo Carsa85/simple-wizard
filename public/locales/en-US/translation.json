@@ -1,0 +1,58 @@
+{
+    "App": {
+        "Title": {
+            "Seminar": "Seminar",
+            "Registration": "Registration"
+        }
+    },
+    "Wizard": {
+        "Step": {
+            "Title": "Step {{stepId}}",
+            "Users": {
+                "ProvideFullName": "Please provide full names:",
+                "Form": {
+                    "AttendeesNumber": {
+                        "Label": "How many people will be attending?",
+                        "Placeholder": "Please Choose"
+                    },
+                    "Attendee": {
+                        "Label": "Attendee {{attendeeId}} Name:",
+                        "Placeholder": "full name"
+                    }
+                }
+            },
+            "GroupInfo": {
+                "Form": {
+                    "AddCompanyName": {
+                        "Label": "Would you like your company name on your badges?",
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "CompanyName": {
+                        "Label": "Company Name:",
+                        "Placeholder": "company name"
+                    },
+                    "AddSpecialAccomodation": {
+                        "Label": "Will anyone in your group reqiure special accomodations?",
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "SpecialAccomodation": {
+                        "Label": "Whatever:",
+                        "Placeholder": "suppose an accomodation"
+                    }
+                }
+            },
+            "ReadyToRock": {
+                "Form": {
+                    "ReadyToRock": {
+                        "Label": "Are you ready to rock?"
+                    },
+                    "Butto": {
+                        "Complete": "Complate registration"
+                    }
+                }
+            }
+        }
+    }
+}

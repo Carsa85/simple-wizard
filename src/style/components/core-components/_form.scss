@@ -1,0 +1,28 @@
+form {
+    select {
+        &.form-control {
+            min-width: 155px;
+        }
+    }
+
+    .form-group {
+        .check-line {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .form-check {
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            
+            .form-check-input {
+                position: relative;
+                margin: 0px;
+            }
+        }
+    }
+}
