@@ -1,0 +1,97 @@
+.Step {
+    padding: 40px 7px;
+    background: transparent;
+
+    .backdrop {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: calc(100%);
+        width: 100%;
+        background: $gray-800;
+        opacity: 0.5;
+        z-index: 100;
+    }
+
+    .step-name {
+        padding: 5px 10px;
+        background: $white;
+        position: absolute;
+        top: 17px;
+        left: 30px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 15px;
+    }
+    .step-body {
+        .content {
+            padding: 40px 20px 20px;
+            .question-sentence {
+                font-style: italic;
+                font-size: 1.3rem;
+            }
+            form {
+                label {
+                    padding: calc(0.375rem + 1px) 15px;
+                }
+            }
+            &.Users {
+                background: mix($success, $gray-200);
+                /* warning: this is generally a bad idea */
+                .attendeeList-0 {
+                    max-height: 0px;
+                    transition: max-height 0.25s ease;
+                    height: 100%;
+                    overflow: hidden;
+                }
+                @for $i from 1 through $attendee-number {
+                    .attendeeList-#{$i} {
+                        max-height: calc(28px + 54px * #{$i});
+                        transition: max-height 0.25s ease;
+                        height: 100%;
+                        overflow: hidden;
+                    }
+                }
+            }
+            &.ReadyToRock {
+                background: mix($danger, $gray-200);
+            }
+            &.GroupInfo {
+                background: mix($primary, $gray-200);
+                .specify-attribute-input {
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: max-height 0.25s ease-out;
+                    &.is-visible {
+                        max-height: 100px;
+                        transition: max-height 0.25s ease-in;
+                    }
+                }
+            }
+        }
+        .validated-step {
+            height: 100px;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.25s ease-out;
+            .check-badge {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                width: 100px;
+                margin: auto;
+                color: $success;
+                background: mix($success, $white);
+                border: 1px outset $gray-400;
+                border-radius: 50%;
+                font-size: 3rem;
+            }
+            &.valid {
+                max-height: 100px;
+                transition: max-height 0.25s ease-in;
+            }
+        }
+    }
+}
